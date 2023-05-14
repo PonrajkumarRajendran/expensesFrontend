@@ -45,7 +45,7 @@ const Navigation = () => {
     }
   }, [user]);
   const handleLogout = () => {
-    window.open("http://localhost:5000/api/user/auth/logout", "_self");
+    window.open("https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/user/auth/logout", "_self");
     localStorage.removeItem("user");
     localStorage.removeItem("username");
     Cookies.remove("user");

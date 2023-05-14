@@ -16,7 +16,7 @@ const SignIn = () => {
   }, [user]);
 
   const handleClick = async () => {
-    window.open("http://localhost:5000/api/user/auth/facebook", "_self");
+    window.open("https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/user/auth/facebook", "_self");
   };
   const handleSignUpclick = () => {
     navigate("signup");

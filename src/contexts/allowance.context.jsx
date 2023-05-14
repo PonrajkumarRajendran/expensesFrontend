@@ -12,7 +12,7 @@ export const AllowanceProvider = ({ children }) => {
       const userToken = localStorage.getItem("user");
       try {
         const response = await fetch(
-          "http://localhost:5000/api/allowance/getallowance",
+          "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/allowance/getallowance",
           {
             method: "POST",
             headers: {
@@ -38,7 +38,7 @@ export const AllowanceProvider = ({ children }) => {
       try {
         const userToken = localStorage.getItem("user");
         const response = await fetch(
-          "http://localhost:5000/api/allowance/addallowance",
+          "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/allowance/addallowance",
           {
             method: "POST",
             headers: {

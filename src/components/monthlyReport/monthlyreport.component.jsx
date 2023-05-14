@@ -22,7 +22,7 @@ const MonthlyReport = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:5000/api/expense/getmonthreport",
+        "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/expense/getmonthreport",
         {
           method: "POST",
           headers: {

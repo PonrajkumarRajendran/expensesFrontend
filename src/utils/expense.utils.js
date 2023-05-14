@@ -15,7 +15,7 @@ export const getWeekExpenses = async (setFunction) => {
     const userToken = localStorage.getItem("user");
     try {
       const response = await fetch(
-        "http://localhost:5000/api/expense/getweekexpense",
+        "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/expense/getweekexpense",
         {
           method: "POST",
           headers: {
@@ -40,7 +40,7 @@ export const deleteOneExpense = async (id) => {
   const userToken = localStorage.getItem("user");
   try {
     const response = await fetch(
-      "http://localhost:5000/api/expense/deleteexpense",
+      "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/expense/deleteexpense",
       {
         method: "POST",
         headers: {
@@ -66,7 +66,7 @@ export const getTypeExpenses = async (setFunction) => {
   };
   try {
     const response = await fetch(
-      "http://localhost:5000/api/expense/getmonthstotal",
+      "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/expense/getmonthstotal",
       {
         method: "POST",
         headers: {

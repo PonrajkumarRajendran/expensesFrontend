@@ -9,7 +9,7 @@ export const addExpense = async (fields) => {
   console.log("inside");
   try {
     const response = await fetch(
-      "http://localhost:5000/api/expense/addexpense",
+      "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/expense/addexpense",
       {
         method: "POST",
         headers: {
