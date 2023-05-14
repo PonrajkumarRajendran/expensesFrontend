@@ -1,69 +1,142 @@
-.balance-container {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  .allowance-box {
-    width: 45%;
-    background-color: white;
-    box-shadow: 2px 2px 16px -10px #121212;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 20px;
+@media screen and (max-width: 1024px) {
+  .balance-container {
+    width: 90%;
     display: flex;
-    flex-direction: column;
-    position: relative;
-    .allowance-edit-icon {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
+    justify-content: space-between;
+    .allowance-box {
+      width: 45%;
+      background-color: white;
+      box-shadow: 2px 2px 16px -10px #121212;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .allowance-edit-icon {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      .allowance-box-content {
+        margin: 10px 0;
+        font-size: 32px;
+      }
+      .allowance-box-title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+    .balance-box {
+      width: 45%;
+      background-color: white;
+      box-shadow: 2px 2px 16px -10px #121212;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      .balance-box-content {
+        margin: 10px 0;
+        font-size: 32px;
+      }
+      .balance-box-title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+  .allowance-modal-visible {
+    position: fixed;
+    top: 0;
+    z-index: 6;
+    .allowance-modal-close {
+      z-index: 6;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: white;
+      padding: 10px;
+      box-sizing: border-box;
+      font-weight: 600;
+      border-radius: 10px;
       cursor: pointer;
     }
-    .allowance-box-content {
-      margin: 10px 0;
-      font-size: 32px;
-    }
-    .allowance-box-title {
-      font-size: 20px;
-      font-weight: 600;
-    }
   }
-  .balance-box {
-    width: 45%;
-    background-color: white;
-    box-shadow: 2px 2px 16px -10px #121212;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 20px;
+  .allowance-modal-hidden {
+    display: none;
+    width: 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .balance-container {
+    width: 90%;
     display: flex;
-    flex-direction: column;
-    .balance-box-content {
-      margin: 10px 0;
-      font-size: 32px;
+    justify-content: space-between;
+    .allowance-box {
+      width: 45%;
+      background-color: white;
+      box-shadow: 2px 2px 16px -10px #121212;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .allowance-edit-icon {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      .allowance-box-content {
+        margin: 10px 0;
+        font-size: 32px;
+      }
+      .allowance-box-title {
+        font-size: 20px;
+        font-weight: 600;
+      }
     }
-    .balance-box-title {
-      font-size: 20px;
-      font-weight: 600;
+    .balance-box {
+      width: 45%;
+      background-color: white;
+      box-shadow: 2px 2px 16px -10px #121212;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      .balance-box-content {
+        margin: 10px 0;
+        font-size: 32px;
+      }
+      .balance-box-title {
+        font-size: 20px;
+        font-weight: 600;
+      }
     }
   }
-}
-.allowance-modal-visible {
-  position: fixed;
-  top: 0;
-  z-index: 6;
-  .allowance-modal-close {
-    z-index: 6;
+  .allowance-modal-visible {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: white;
-    padding: 10px;
-    box-sizing: border-box;
-    font-weight: 600;
-    border-radius: 10px;
-    cursor: pointer;
+    top: 0;
+    z-index: 6;
+    .allowance-modal-close {
+      z-index: 6;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: white;
+      padding: 10px;
+      box-sizing: border-box;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+    }
   }
-}
-.allowance-modal-hidden {
-  display: none;
-  width: 0;
+  .allowance-modal-hidden {
+    display: none;
+    width: 0;
+  }
 }

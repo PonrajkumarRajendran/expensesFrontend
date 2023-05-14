@@ -1,92 +1,190 @@
-.signup-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  .signup-box {
-    width: 40%;
-    background: white;
-    box-shadow: 2px 2px 16px -10px #121212;
-    border-radius: 20px;
+@media screen and (max-width: 1024px) {
+  .signup-container {
     display: flex;
     justify-content: center;
-    padding: 10px 20px;
     align-items: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    .signup-box-title {
-      margin: 20px;
-      font-size: 20px;
-      font-weight: 600;
-    }
-    form {
-      width: 100%;
+    width: 100%;
+    min-height: 100vh;
+    .signup-box {
+      width: 80%;
+      background: white;
+      box-shadow: 2px 2px 16px -10px #121212;
+      border-radius: 20px;
       display: flex;
+      justify-content: center;
+      padding: 10px 20px;
       align-items: center;
       flex-direction: column;
-      .signup-input {
-        width: 80%;
-        margin: 10px;
-        font-family: "Montserrat";
-        padding: 5px;
-        box-sizing: border-box;
-        outline: none;
-        border: none;
-        border-bottom: 1px solid #595959;
+      box-sizing: border-box;
+      .signup-box-title {
+        margin: 20px;
+        font-size: 20px;
+        font-weight: 600;
       }
-      .signup-button {
-        padding: 5px 10px;
-        background: none;
-        border: none;
-        background-color: #595959;
-        color: white;
-        border-radius: 20px;
-        font-family: "Montserrat";
-        font-size: 16px;
-        margin: 10px;
-        cursor: pointer;
-      }
-    }
-    .signup-options-container {
-      margin: 5px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .signin-link {
-        font-size: 14px;
-        margin: 10px;
-        .signin-button {
-          color: blue;
-          text-decoration: underline;
+      form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .signup-input {
+          width: 80%;
+          margin: 10px;
+          font-family: "Montserrat";
+          padding: 5px;
+          box-sizing: border-box;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #595959;
+        }
+        .signup-button {
+          padding: 5px 10px;
+          background: none;
+          border: none;
+          background-color: #595959;
+          color: white;
+          border-radius: 20px;
+          font-family: "Montserrat";
+          font-size: 16px;
+          margin: 10px;
           cursor: pointer;
         }
       }
-      .signin-or-container {
-        border: 1px solid #8d8d8d;
-        width: 80%;
-        position: relative;
-        margin: 20px;
-        .signin-or {
-          position: absolute;
-          top: -7px;
-          left: 40%;
-          background-color: white;
-          font-size: 12px;
-          padding: 0 5px;
+      .signup-options-container {
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .signin-link {
+          font-size: 14px;
+          margin: 10px;
+          .signin-button {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+        .signin-or-container {
+          border: 1px solid #8d8d8d;
+          width: 80%;
+          position: relative;
+          margin: 20px;
+          .signin-or {
+            position: absolute;
+            top: -7px;
+            left: 40%;
+            background-color: white;
+            font-size: 12px;
+            padding: 0 5px;
+            box-sizing: border-box;
+          }
+        }
+        .facebook-login-click {
+          cursor: pointer;
+          padding: 10px;
           box-sizing: border-box;
+          border: 1px solid #121212;
+          border-radius: 5px;
+          .facebook-icon {
+            color: #595959;
+            margin: 0 10px;
+            font-size: 18px;
+          }
         }
       }
-      .facebook-login-click {
-        cursor: pointer;
-        padding: 10px;
-        box-sizing: border-box;
-        border: 1px solid #121212;
-        border-radius: 5px;
-        .facebook-icon {
-          color: #595959;
-          margin: 0 10px;
-          font-size: 18px;
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    .signup-box {
+      width: 40%;
+      background: white;
+      box-shadow: 2px 2px 16px -10px #121212;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      padding: 10px 20px;
+      align-items: center;
+      flex-direction: column;
+      box-sizing: border-box;
+      .signup-box-title {
+        margin: 20px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .signup-input {
+          width: 80%;
+          margin: 10px;
+          font-family: "Montserrat";
+          padding: 5px;
+          box-sizing: border-box;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #595959;
+        }
+        .signup-button {
+          padding: 5px 10px;
+          background: none;
+          border: none;
+          background-color: #595959;
+          color: white;
+          border-radius: 20px;
+          font-family: "Montserrat";
+          font-size: 16px;
+          margin: 10px;
+          cursor: pointer;
+        }
+      }
+      .signup-options-container {
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .signin-link {
+          font-size: 14px;
+          margin: 10px;
+          .signin-button {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+        .signin-or-container {
+          border: 1px solid #8d8d8d;
+          width: 80%;
+          position: relative;
+          margin: 20px;
+          .signin-or {
+            position: absolute;
+            top: -7px;
+            left: 40%;
+            background-color: white;
+            font-size: 12px;
+            padding: 0 5px;
+            box-sizing: border-box;
+          }
+        }
+        .facebook-login-click {
+          cursor: pointer;
+          padding: 10px;
+          box-sizing: border-box;
+          border: 1px solid #121212;
+          border-radius: 5px;
+          .facebook-icon {
+            color: #595959;
+            margin: 0 10px;
+            font-size: 18px;
+          }
         }
       }
     }

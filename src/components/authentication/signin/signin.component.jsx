@@ -34,48 +34,94 @@ const SignIn = () => {
     const { name, value } = event.target;
     setSigninFields({ ...signinFields, [name]: value });
   };
-  return (
-    <div className="signin-container">
-      <div className="signin-box">
-        <span className="signin-box-title">SIGN IN</span>
-        <form onSubmit={handleSigninClick}>
-          <input
-            type="text"
-            className="signin-input"
-            name="email"
-            value={email}
-            placeholder="E-mail"
-            onChange={handleChange}
-          />
-          <input
-            type="password"
-            className="signin-input"
-            value={password}
-            name="password"
-            placeholder="Password"
-            onChange={handleChange}
-          />
-          <button type="submit" className="signin-button">
-            Sign In
-          </button>
-        </form>
-        <div className="signin-options">
-          <span className="signup-navigate-link">
-            New Here?
-            <span className="signup-button" onClick={handleSignUpclick}>
-              Sign Up
+  if (window.innerWidth > 1024) {
+    return (
+      <div className="signin-container-desktop">
+        <div className="signin-box">
+          <span className="signin-box-title">SIGN IN</span>
+          <form onSubmit={handleSigninClick}>
+            <input
+              type="text"
+              className="signin-input"
+              name="email"
+              value={email}
+              placeholder="E-mail"
+              onChange={handleChange}
+            />
+            <input
+              type="password"
+              className="signin-input"
+              value={password}
+              name="password"
+              placeholder="Password"
+              onChange={handleChange}
+            />
+            <button type="submit" className="signin-button">
+              Sign In
+            </button>
+          </form>
+          <div className="signin-options">
+            <span className="signup-navigate-link">
+              New Here?
+              <span className="signup-button" onClick={handleSignUpclick}>
+                Sign Up
+              </span>
             </span>
-          </span>
-          <div className="signin-or-container">
-            <span className="signin-or">OR</span>
+            <div className="signin-or-container">
+              <span className="signin-or">OR</span>
+            </div>
+            <span className="facebook-login-click" onClick={handleClick}>
+              <FontAwesomeIcon className="facebook-icon" icon={faFacebook} />
+              Login with facebook
+            </span>
           </div>
-          <span className="facebook-login-click" onClick={handleClick}>
-            <FontAwesomeIcon className="facebook-icon" icon={faFacebook} />
-            Login with facebook
-          </span>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="signin-container-mobile">
+        <div className="signin-box">
+          <span className="signin-box-title">SIGN IN</span>
+          <form onSubmit={handleSigninClick}>
+            <input
+              type="text"
+              className="signin-input"
+              name="email"
+              value={email}
+              placeholder="E-mail"
+              onChange={handleChange}
+            />
+            <input
+              type="password"
+              className="signin-input"
+              value={password}
+              name="password"
+              placeholder="Password"
+              onChange={handleChange}
+            />
+            <button type="submit" className="signin-button">
+              Sign In
+            </button>
+          </form>
+          <div className="signin-options">
+            <span className="signup-navigate-link">
+              New Here?
+              <span className="signup-button" onClick={handleSignUpclick}>
+                Sign Up
+              </span>
+            </span>
+            <div className="signin-or-container">
+              <span className="signin-or">OR</span>
+            </div>
+            <span className="facebook-login-click" onClick={handleClick}>
+              <FontAwesomeIcon className="facebook-icon" icon={faFacebook} />
+              Login with facebook
+            </span>
+          </div>
+        </div>
+      </div>
+    );
+  }
 };
 export default SignIn;

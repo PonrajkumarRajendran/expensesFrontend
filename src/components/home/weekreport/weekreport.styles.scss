@@ -1,66 +1,136 @@
-.weekreport-container {
-  width: 90%;
-  .weekreport-title {
-    font-weight: 700;
-    padding: 20px;
-    box-sizing: border-box;
-    font-size: 18px;
-  }
-  .weekreport-list {
-    margin-top: 10px;
-    width: 100%;
-    background-color: white;
-    box-shadow: 2px 2px 16px -10px #121212;
-    border-radius: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .weekreport-item {
-      width: 90%;
-      display: flex;
-      font-size: 14px;
+@media screen and (max-width: 1024px) {
+  .weekreport-container {
+    width: 90%;
+    .weekreport-title {
+      font-weight: 700;
+      padding: 20px;
+      box-sizing: border-box;
+      font-size: 18px;
+    }
+    .weekreport-list {
+      margin-top: 10px;
+      width: 100%;
+      background-color: white;
+      box-shadow: 2px 2px 16px -10px #121212;
+      border-radius: 20px;
       padding: 10px;
       box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      .weekreport-item-title {
+      .weekreport-item {
+        width: 100%;
         display: flex;
-        justify-content: center;
-        width: 20%;
-      }
-      .weekreport-item-value {
-        display: flex;
-        justify-content: center;
-        width: 20%;
-      }
-      .weekreport-item-date {
-        display: flex;
-        justify-content: center;
-        width: 20%;
-      }
-      .weekreport-item-delete {
-        display: flex;
-        justify-content: center;
-        width: 20%;
-        cursor: pointer;
-      }
-      .weekreport-item-type {
-        display: flex;
-        justify-content: center;
-        width: 20%;
-        padding: 5px;
+        font-size: 12px;
         box-sizing: border-box;
-        border-radius: 5px;
+        align-items: center;
+        .weekreport-item-title {
+          display: flex;
+          justify-content: center;
+          width: 20%;
+        }
+        .weekreport-item-value {
+          display: flex;
+          justify-content: center;
+          width: 20%;
+        }
+        .weekreport-item-date {
+          display: flex;
+          justify-content: center;
+          width: 20%;
+        }
+        .weekreport-item-delete {
+          display: flex;
+          justify-content: center;
+          width: 20%;
+          cursor: pointer;
+        }
+        .weekreport-item-type {
+          display: flex;
+          justify-content: center;
+          width: 20%;
+          padding: 5px;
+          box-sizing: border-box;
+          border-radius: 5px;
+        }
       }
     }
   }
+  .weekreport-inner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
-.weekreport-inner-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+@media screen and (min-width: 1025px) {
+  .weekreport-container {
+    width: 90%;
+    .weekreport-title {
+      font-weight: 700;
+      padding: 20px;
+      box-sizing: border-box;
+      font-size: 18px;
+    }
+    .weekreport-list {
+      margin-top: 10px;
+      width: 100%;
+      background-color: white;
+      box-shadow: 2px 2px 16px -10px #121212;
+      border-radius: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .weekreport-item {
+        width: 90%;
+        display: flex;
+        font-size: 14px;
+        padding: 10px;
+        box-sizing: border-box;
+        align-items: center;
+        .weekreport-item-title {
+          display: flex;
+          justify-content: center;
+          width: 20%;
+        }
+        .weekreport-item-value {
+          display: flex;
+          justify-content: center;
+          width: 20%;
+        }
+        .weekreport-item-date {
+          display: flex;
+          justify-content: center;
+          width: 20%;
+        }
+        .weekreport-item-delete {
+          display: flex;
+          justify-content: center;
+          width: 20%;
+          cursor: pointer;
+        }
+        .weekreport-item-type {
+          display: flex;
+          justify-content: center;
+          width: 20%;
+          padding: 5px;
+          box-sizing: border-box;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  .weekreport-inner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }

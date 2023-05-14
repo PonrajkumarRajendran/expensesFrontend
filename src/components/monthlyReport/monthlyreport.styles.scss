@@ -1,60 +1,154 @@
-.monthlyreport-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 30px;
-  width: 100%;
-  .monthly-request-label {
-    font-size: 14px;
-    margin: 5px;
+@media screen and (max-width: 1024px) {
+  .monthlyreport-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .monthly-request-label {
+      font-size: 14px;
+      margin: 5px;
+    }
+    .monthly-request-input {
+      margin: 5px;
+      font-family: "Montserrat";
+      padding: 5px;
+      outline: none;
+      border-radius: 10px;
+      border: none;
+      border: 1px solid #595959;
+    }
+    .monthly-request-submit {
+      padding: 5px 10px;
+      background: none;
+      border: none;
+      outline: none;
+      font-family: "Montserrat";
+      margin: 10px;
+      background-color: #595959;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
   }
-  .monthly-request-input {
-    margin: 5px;
-    font-family: "Montserrat";
-    padding: 5px;
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    border: 1px solid #595959;
-  }
-  .monthly-request-submit {
-    padding: 5px 10px;
-    background: none;
-    border: none;
-    outline: none;
-    font-family: "Montserrat";
-    margin: 10px;
-    background-color: #595959;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
+  .monthly-report-box {
+    margin: 20px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 16px -10px #121212;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    .monthly-report-list {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      .monthly-report-item {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 14px;
+        margin: 5px;
+        box-sizing: border-box;
+        .mr-expense-title {
+          font-weight: 600;
+        }
+        .mr-expense-type {
+          font-weight: 600;
+        }
+      }
+    }
   }
 }
-.monthly-report-box {
-  margin: 20px;
-  width: 60%;
-  background-color: white;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 2px 2px 16px -10px #121212;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  .monthly-report-list {
-    width: 60%;
+
+@media screen and (min-width: 1025px) {
+  .monthlyreport-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    .monthly-report-item {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    .monthly-request-label {
       font-size: 14px;
-      .mr-expense-title {
-        font-weight: 600;
+      margin: 5px;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
-      .mr-expense-type {
-        font-weight: 600;
+    }
+    .monthly-request-input {
+      margin: 5px;
+      font-family: "Montserrat";
+      padding: 5px;
+      outline: none;
+      border-radius: 10px;
+      border: none;
+      border: 1px solid #595959;
+    }
+    .monthly-request-submit {
+      padding: 5px 10px;
+      background: none;
+      border: none;
+      outline: none;
+      font-family: "Montserrat";
+      margin: 10px;
+      background-color: #595959;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  .monthly-report-box {
+    margin: 20px;
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 16px -10px #121212;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    .monthly-report-list {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      .monthly-report-item {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 14px;
+        .mr-expense-title {
+          font-weight: 600;
+        }
+        .mr-expense-type {
+          font-weight: 600;
+        }
       }
     }
   }

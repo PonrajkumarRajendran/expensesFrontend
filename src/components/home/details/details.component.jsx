@@ -49,10 +49,30 @@ const Details = () => {
   } else {
     return (
       <div className="details-container-mobile">
-        <div className="details-box"></div>
-        <div className="details-box"></div>
-        <div className="details-box"></div>
-        <div className="details-box"></div>
+        <div className="details-box">
+          <FontAwesomeIcon className="details-box-icon" icon={faBowlFood} />
+          <span className="details-box-detail">
+            {typeExpenses["foodTotal"]}
+          </span>
+        </div>
+        <div className="details-box">
+          <FontAwesomeIcon className="details-box-icon" icon={faBus} />
+          <span className="details-box-detail">
+            {typeExpenses["travelTotal"]}
+          </span>
+        </div>
+        <div className="details-box">
+          <FontAwesomeIcon className="details-box-icon" icon={faBagShopping} />
+          <span className="details-box-detail">
+            {typeExpenses["shoppingTotal"]}
+          </span>
+        </div>
+        <div className="details-box">
+          <span className="details-box-misc">Misc.</span>
+          <span className="details-box-detail">
+            {typeExpenses["miscTotal"]}
+          </span>
+        </div>
       </div>
     );
   }

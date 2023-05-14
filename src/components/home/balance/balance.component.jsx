@@ -7,7 +7,7 @@ import AllowanceModal from "./allowanceModal/allowanceModal.component";
 import { ExpenseContext } from "../../../contexts/expense.context";
 
 const Balance = () => {
-  const { allowance, setAllowance } = useContext(AllowanceContext);
+  const { allowance } = useContext(AllowanceContext);
   const [modalClass, setModalClass] = useState("allowance-modal-hidden");
   const toggleModal = () => {
     if (modalClass === "allowance-modal-hidden") {

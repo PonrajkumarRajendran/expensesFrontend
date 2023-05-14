@@ -40,7 +40,7 @@ const MonthlyReport = () => {
   };
   const handleChange = (event) => {
     const { name, value } = event.target;
-    if (name === "month" && value <= 12 && value > 0) {
+    if (name === "month" && value <= 12 && value >= 0) {
       setRequestFields({ ...requestFields, [name]: value });
     } else if (name === "year") {
       setRequestFields({ ...requestFields, [name]: value });
@@ -50,22 +50,27 @@ const MonthlyReport = () => {
     <div className="monthlyreport-container">
       <div className="monthly-request-box">
         <form onSubmit={handleSubmit}>
-          <label className="monthly-request-label">Month:</label>
-          <input
-            type="number"
-            name="month"
-            value={month}
-            onChange={handleChange}
-            className="monthly-request-input"
-          />
-          <label className="monthly-request-label">Year:</label>
-          <input
-            type="number"
-            name="year"
-            value={year}
-            onChange={handleChange}
-            className="monthly-request-input"
-          />
+          <div>
+            <label className="monthly-request-label">Month:</label>
+            <input
+              type="number"
+              name="month"
+              value={month}
+              onChange={handleChange}
+              className="monthly-request-input"
+            />
+          </div>
+          <div>
+            <label className="monthly-request-label">Year:</label>
+            <input
+              type="number"
+              name="year"
+              value={year}
+              onChange={handleChange}
+              className="monthly-request-input"
+            />
+          </div>
+
           <button type="submit" className="monthly-request-submit">
             Pull Expenses
           </button>

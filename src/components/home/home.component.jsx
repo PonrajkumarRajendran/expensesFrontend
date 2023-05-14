@@ -12,7 +12,10 @@ const Home = () => {
           <HomeRight />
         </div>
       ) : (
-        <div className="home-mobile"></div>
+        <div className="home-mobile">
+          <HomeLeft />
+          <HomeRight />
+        </div>
       )}
     </div>
   );

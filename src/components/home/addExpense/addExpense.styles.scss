@@ -1,64 +1,140 @@
-.add-expense-container {
-  margin-bottom: 20px;
-  width: 90%;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 2px 2px 16px -10px #121212;
-  border-radius: 20px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .add-expense-input {
-    width: 20%;
-    font-family: "Montserrat";
-    margin: 10px;
-    background: none;
-    border: none;
-    border: 1px solid #595959;
-    border-radius: 5px;
+@media screen and (max-width: 1024px) {
+  .add-expense-container {
+    margin-bottom: 20px;
+    width: 90%;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 16px -10px #121212;
+    border-radius: 20px;
     box-sizing: border-box;
-    padding: 5px;
-    outline: none;
-  }
-  .add-expense-dropdown {
-    font-family: "Montserrat";
-    margin: 10px;
-    background: none;
-    border: none;
-    border: 1px solid #595959;
-    padding: 5px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    outline: none;
-    .add-expense-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .add-expense-input {
+      width: 90%;
+      font-family: "Montserrat";
+      margin: 10px;
+      background: none;
+      border: none;
+      border: 1px solid #595959;
+      border-radius: 5px;
+      box-sizing: border-box;
+      padding: 5px;
+      outline: none;
+    }
+    .add-expense-dropdown {
+      width: 90%;
+      font-family: "Montserrat";
+      margin: 10px;
+      background: none;
+      border: none;
+      border: 1px solid #595959;
       padding: 5px;
       box-sizing: border-box;
+      border-radius: 5px;
+      outline: none;
+      .add-expense-value {
+        padding: 5px;
+        box-sizing: border-box;
+      }
+    }
+    .add-expense-date {
+      width: 90%;
+      font-family: "Montserrat";
+      margin: 10px;
+      background: none;
+      border: none;
+      border: 1px solid #595959;
+      padding: 5px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      outline: none;
+    }
+    .add-expense-submit {
+      width: 60%;
+      font-family: "Montserrat";
+      margin: 10px;
+      padding: 5px;
+      box-sizing: border-box;
+      background: none;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      background-color: #595959;
+      font-weight: 600;
+      cursor: pointer;
     }
   }
-  .add-expense-date {
-    font-family: "Montserrat";
-    margin: 10px;
-    background: none;
-    border: none;
-    border: 1px solid #595959;
-    padding: 5px;
+}
+@media screen and (min-width: 1025px) {
+  .add-expense-container {
+    margin-bottom: 20px;
+    width: 90%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 16px -10px #121212;
+    border-radius: 20px;
     box-sizing: border-box;
-    border-radius: 5px;
-    outline: none;
-  }
-  .add-expense-submit {
-    font-family: "Montserrat";
-    margin: 10px;
-    padding: 5px;
-    box-sizing: border-box;
-    background: none;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    background-color: #595959;
-    font-weight: 600;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .add-expense-input {
+      width: 20%;
+      font-family: "Montserrat";
+      margin: 10px;
+      background: none;
+      border: none;
+      border: 1px solid #595959;
+      border-radius: 5px;
+      box-sizing: border-box;
+      padding: 5px;
+      outline: none;
+    }
+    .add-expense-dropdown {
+      font-family: "Montserrat";
+      margin: 10px;
+      background: none;
+      border: none;
+      border: 1px solid #595959;
+      padding: 5px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      outline: none;
+      .add-expense-value {
+        padding: 5px;
+        box-sizing: border-box;
+      }
+    }
+    .add-expense-date {
+      font-family: "Montserrat";
+      margin: 10px;
+      background: none;
+      border: none;
+      border: 1px solid #595959;
+      padding: 5px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      outline: none;
+    }
+    .add-expense-submit {
+      font-family: "Montserrat";
+      margin: 10px;
+      padding: 5px;
+      box-sizing: border-box;
+      background: none;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      background-color: #595959;
+      font-weight: 600;
+      cursor: pointer;
+    }
   }
 }

@@ -38,3 +38,37 @@
     }
   }
 }
+.details-container-mobile {
+  margin-top: 20px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  .details-container-title {
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 10px;
+  }
+  .details-box {
+    width: 20%;
+    background-color: white;
+    box-shadow: 2px 2px 16px -10px #121212;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    box-sizing: border-box;
+    align-items: center;
+    .details-box-icon {
+      font-size: 20px;
+      color: #363636;
+    }
+    .details-box-misc {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .details-box-detail {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+}
