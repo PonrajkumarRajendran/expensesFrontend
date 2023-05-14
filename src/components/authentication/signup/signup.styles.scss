@@ -9,16 +9,19 @@
     background: white;
     box-shadow: 2px 2px 16px -10px #121212;
     border-radius: 20px;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    align-items: center;
+    flex-direction: column;
     box-sizing: border-box;
     .signup-box-title {
-      width: 100%;
-      display: flex;
-      justify-content: center;
+      margin: 20px;
       font-size: 20px;
       font-weight: 600;
     }
-    .signup-form {
+    form {
+      width: 100%;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -28,7 +31,6 @@
         font-family: "Montserrat";
         padding: 5px;
         box-sizing: border-box;
-
         outline: none;
         border: none;
         border-bottom: 1px solid #595959;
@@ -68,7 +70,7 @@
         .signin-or {
           position: absolute;
           top: -7px;
-          left: 45%;
+          left: 40%;
           background-color: white;
           font-size: 12px;
           padding: 0 5px;

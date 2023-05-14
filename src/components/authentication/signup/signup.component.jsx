@@ -47,37 +47,37 @@ const SignUp = () => {
     <div className="signup-container">
       <div className="signup-box">
         <span className="signup-box-title">SIGN UP</span>
-        <div>
-          <form className="signup-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              className="signup-input"
-              name="email"
-              placeholder="E-mail"
-              value={email}
-              onChange={handleChange}
-            />
-            <input
-              type="password"
-              className="signup-input"
-              name="password"
-              placeholder="Password"
-              value={password}
-              onChange={handleChange}
-            />
-            <input
-              type="password"
-              className="signup-input"
-              name="confirmPassword"
-              placeholder="Confirm Password"
-              value={confirmPassword}
-              onChange={handleChange}
-            />
-            <button className="signup-button" type="submit">
-              Sign Up
-            </button>
-          </form>
-        </div>
+
+        <form className="signup-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className="signup-input"
+            name="email"
+            placeholder="E-mail"
+            value={email}
+            onChange={handleChange}
+          />
+          <input
+            type="password"
+            className="signup-input"
+            name="password"
+            placeholder="Password"
+            value={password}
+            onChange={handleChange}
+          />
+          <input
+            type="password"
+            className="signup-input"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            onChange={handleChange}
+          />
+          <button className="signup-button" type="submit">
+            Sign Up
+          </button>
+        </form>
+
         <div className="signup-options-container">
           <span className="signin-link">
             Already a user?
