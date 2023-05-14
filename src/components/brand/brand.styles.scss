@@ -1,0 +1,14 @@
+.brand-container {
+  font-size: 24px;
+  .brand-desktop {
+    box-sizing: border-box;
+    font-weight: 600;
+  }
+  .brand-mobile {
+    background-color: #121212;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 7px;
+  }
+}

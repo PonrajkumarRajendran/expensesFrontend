@@ -1,0 +1,50 @@
+.allowance-modal-container {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9e9e9e62;
+  .allowance-modal-box {
+    background-color: white;
+    width: 30%;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .allowance-modal-label {
+        font-weight: 600;
+        margin: 10px;
+      }
+      .allowance-modal-input {
+        font-family: "Montserrat";
+        padding: 5px;
+        width: 80%;
+        margin: 10px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        border: 1px solid #595959;
+      }
+      .allowance-modal-submit {
+        padding: 5px 10px;
+        background: none;
+        border: none;
+        outline: none;
+        background-color: #595959;
+        color: white;
+        font-family: "Montserrat";
+        border-radius: 10px;
+        margin: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
