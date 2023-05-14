@@ -3,12 +3,14 @@ import "./signin.styles.scss";
 import { signinInitial, handleSignin } from "./signin.utils";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../../contexts/users.context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 const SignIn = () => {
   const [signinFields, setSigninFields] = useState(signinInitial);
   const { email, password } = signinFields;
   const navigate = useNavigate();
 
-  const { user, setUser } = useContext(UserContext);
+  const { user } = useContext(UserContext);
   useEffect(() => {
     if (user !== "") {
       navigate("/home");
@@ -16,7 +18,10 @@ const SignIn = () => {
   }, [user]);
 
   const handleClick = async () => {
-    window.open("https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/user/auth/facebook", "_self");
+    window.open(
+      "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/user/auth/facebook",
+      "_self"
+    );
   };
   const handleSignUpclick = () => {
     navigate("signup");
@@ -61,7 +66,11 @@ const SignIn = () => {
               Sign Up
             </span>
           </span>
+          <div className="signin-or-container">
+            <span className="signin-or">OR</span>
+          </div>
           <span className="facebook-login-click" onClick={handleClick}>
+            <FontAwesomeIcon className="facebook-icon" icon={faFacebook} />
             Login with facebook
           </span>
         </div>

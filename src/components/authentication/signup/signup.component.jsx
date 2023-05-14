@@ -3,7 +3,8 @@ import "./signup.styles.scss";
 import { useNavigate } from "react-router-dom";
 import { signupInitial, handleSignup } from "./signup.utils";
 import { UserContext } from "../../../contexts/users.context";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 const SignUp = () => {
   const [signupFields, setSignUpFields] = useState(signupInitial);
   const navigate = useNavigate();
@@ -28,6 +29,12 @@ const SignUp = () => {
       window.alert("passwords don't match");
     }
   };
+  const handleClick = async () => {
+    window.open(
+      "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/user/auth/facebook",
+      "_self"
+    );
+  };
   const handleChange = (event) => {
     const { value, name } = event.target;
     if (name === "confirmPassword") {
@@ -51,7 +58,7 @@ const SignUp = () => {
               onChange={handleChange}
             />
             <input
-              type="text"
+              type="password"
               className="signup-input"
               name="password"
               placeholder="Password"
@@ -59,7 +66,7 @@ const SignUp = () => {
               onChange={handleChange}
             />
             <input
-              type="text"
+              type="password"
               className="signup-input"
               name="confirmPassword"
               placeholder="Confirm Password"
@@ -77,6 +84,13 @@ const SignUp = () => {
             <span className="signin-button" onClick={handleSignInClick}>
               Sign In
             </span>
+          </span>
+          <div className="signin-or-container">
+            <span className="signin-or">OR</span>
+          </div>
+          <span className="facebook-login-click" onClick={handleClick}>
+            <FontAwesomeIcon className="facebook-icon" icon={faFacebook} />
+            Login with facebook
           </span>
         </div>
       </div>

@@ -6,7 +6,7 @@ export const inputInitial = {
 };
 export const addExpense = async (fields) => {
   const userToken = localStorage.getItem("user");
-  console.log("inside");
+
   try {
     const response = await fetch(
       "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/expense/addexpense",

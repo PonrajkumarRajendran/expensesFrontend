@@ -62,8 +62,32 @@
         cursor: pointer;
       }
     }
+    .signin-or-container {
+      border: 1px solid #8d8d8d;
+      width: 80%;
+      position: relative;
+      margin: 20px;
+      .signin-or {
+        position: absolute;
+        top: -7px;
+        left: 40%;
+        background-color: white;
+        font-size: 12px;
+        padding: 0 5px;
+        box-sizing: border-box;
+      }
+    }
     .facebook-login-click {
       cursor: pointer;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #121212;
+      border-radius: 5px;
+      .facebook-icon {
+        color: #595959;
+        margin: 0 10px;
+        font-size: 18px;
+      }
     }
   }
 }
