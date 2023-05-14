@@ -22,13 +22,16 @@ const Navigation = () => {
       HOME: "",
       MONTHLY_REPORT: "",
     };
-    setNavigationValues({ ...navigationObject, [localValue]: "active" });
+
     if (localValue) {
+      setNavigationValues({ ...navigationObject, [localValue]: "active" });
       if (localValue === "HOME") {
         navigate("/home");
       } else {
         navigate(localValue.toLowerCase());
       }
+    } else {
+      setNavigationClass({ ...navigationObject, HOME: "active" });
     }
   }, []);
   const handleToggle = () => {
