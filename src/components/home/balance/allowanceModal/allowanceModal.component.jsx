@@ -7,7 +7,6 @@ const AllowanceModal = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setAllowance(allowanceValue);
-    window.location.reload();
   };
   const handleChange = (event) => {
     const { value } = event.target;
