@@ -34,7 +34,6 @@ export const AllowanceProvider = ({ children }) => {
   }, [user]);
 
   useEffect(() => {
-    console.log("inside");
     const setAllowanceFunction = async () => {
       const requestObject = {
         allowance: allowance,
@@ -53,6 +52,7 @@ export const AllowanceProvider = ({ children }) => {
           }
         );
         const result = await response.text();
+        console.log(result);
       } catch (err) {
         console.log(err);
       }
