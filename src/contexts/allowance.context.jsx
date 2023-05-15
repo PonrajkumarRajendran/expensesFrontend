@@ -33,30 +33,30 @@ export const AllowanceProvider = ({ children }) => {
     }
   }, [user]);
 
-  useEffect(() => {
-    const setAllowanceFunction = async () => {
-      const requestObject = {
-        allowance: allowance,
-      };
-      try {
-        const userToken = localStorage.getItem("user");
-        const response = await fetch(
-          "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/allowance/addallowance",
-          {
-            method: "POST",
-            headers: {
-              "Content-type": "application/json",
-              "auth-token": userToken,
-            },
-            body: JSON.stringify(requestObject),
-          }
-        );
-        const result = await response.text();
-        console.log(result);
-      } catch (err) {
-        console.log(err);
-      }
+  const setAllowanceFunction = async () => {
+    const requestObject = {
+      allowance: allowance,
     };
+    try {
+      const userToken = localStorage.getItem("user");
+      const response = await fetch(
+        "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/allowance/addallowance",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+            "auth-token": userToken,
+          },
+          body: JSON.stringify(requestObject),
+        }
+      );
+      const result = await response.text();
+      console.log(result);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
     setAllowanceFunction();
   }, [allowance]);
   return (
