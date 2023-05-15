@@ -12,7 +12,7 @@ function App() {
       <Route path="/">
         <Route index element={<SignIn />} />
         <Route path="signup" element={<SignUp />} />
-        <Route path=":token" element={<MiddlePage />} />
+        <Route path="middle/:token" element={<MiddlePage />} />
       </Route>
       <Route path="home/" element={<Navigation />}>
         <Route index element={<Home />} />
