@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { UserContext } from "./users.context";
 
 export const AllowanceContext = createContext({
   allowance: 0,
@@ -6,7 +7,7 @@ export const AllowanceContext = createContext({
 export const AllowanceProvider = ({ children }) => {
   const [allowance, setAllowance] = useState();
   const value = { allowance, setAllowance };
-
+  const { user } = useContext(UserContext);
   useEffect(() => {
     const getAllowance = async () => {
       const userToken = localStorage.getItem("user");
@@ -27,7 +28,9 @@ export const AllowanceProvider = ({ children }) => {
         console.log(err);
       }
     };
-    getAllowance();
+    if (user !== "") {
+      getAllowance();
+    }
   }, []);
 
   useEffect(() => {
@@ -53,7 +56,9 @@ export const AllowanceProvider = ({ children }) => {
         console.log(err);
       }
     };
-    setAllowance();
+    if (user !== "") {
+      setAllowance();
+    }
   }, [allowance]);
   return (
     <AllowanceContext.Provider value={value}>
