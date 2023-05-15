@@ -8,9 +8,10 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     if (localStorage.getItem("user")) {
       setUser(localStorage.getItem("user"));
-    } else if (Cookies.get("user")) {
-      setUser(Cookies.get("user"));
-      localStorage.setItem("user", Cookies.get("user"));
+    } else if (Cookies.get("auth")) {
+      const tempObject = Cookies.get("auth");
+      setUser(Cookies.get(tempObject["token"]));
+      localStorage.setItem("user", tempObject["token"]);
     }
   }, []);
   const value = { user, setUser };

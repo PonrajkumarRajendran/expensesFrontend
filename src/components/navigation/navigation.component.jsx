@@ -18,6 +18,7 @@ const Navigation = () => {
   const [navigationValues, setNavigationValues] = useState(navigationItems);
   useEffect(() => {
     const localValue = localStorage.getItem("navigationFolder");
+    
     const navigationObject = {
       HOME: "",
       MONTHLY_REPORT: "",
