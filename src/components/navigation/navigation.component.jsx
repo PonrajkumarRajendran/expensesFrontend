@@ -44,13 +44,10 @@ const Navigation = () => {
   };
   const { user, setUser } = useContext(UserContext);
   useEffect(() => {
-    console.log(Cookies.get("auth"));
-  }, []);
-  // useEffect(() => {
-  //   if (user === "") {
-  //     navigate("/");
-  //   }
-  // }, [user]);
+    if (user === "") {
+      navigate("/");
+    }
+  }, [user]);
   const handleLogout = () => {
     window.open(
       "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/user/auth/logout",
