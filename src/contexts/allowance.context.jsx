@@ -35,7 +35,7 @@ export const AllowanceProvider = ({ children }) => {
 
   useEffect(() => {
     console.log("inside");
-    const setAllowance = async () => {
+    const setAllowanceFunction = async () => {
       const requestObject = {
         allowance: allowance,
       };
@@ -57,7 +57,7 @@ export const AllowanceProvider = ({ children }) => {
         console.log(err);
       }
     };
-    setAllowance();
+    setAllowanceFunction();
   }, [allowance]);
   return (
     <AllowanceContext.Provider value={value}>
