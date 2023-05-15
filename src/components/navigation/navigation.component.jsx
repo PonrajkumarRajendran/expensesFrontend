@@ -55,6 +55,7 @@ const Navigation = () => {
     );
     localStorage.removeItem("user");
     localStorage.removeItem("username");
+    localStorage.removeItem("navigationFolder");
     Cookies.remove("user");
     setUser("");
   };
