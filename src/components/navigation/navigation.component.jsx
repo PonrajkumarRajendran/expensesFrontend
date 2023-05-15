@@ -18,7 +18,7 @@ const Navigation = () => {
   const [navigationValues, setNavigationValues] = useState(navigationItems);
   useEffect(() => {
     const localValue = localStorage.getItem("navigationFolder");
-    
+
     const navigationObject = {
       HOME: "",
       MONTHLY_REPORT: "",
@@ -43,11 +43,11 @@ const Navigation = () => {
     }
   };
   const { user, setUser } = useContext(UserContext);
-  useEffect(() => {
-    if (user === "") {
-      navigate("/");
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user === "") {
+  //     navigate("/");
+  //   }
+  // }, [user]);
   const handleLogout = () => {
     window.open(
       "https://serene-lokum-53b06d.netlify.app/.netlify/functions/api/user/auth/logout",
