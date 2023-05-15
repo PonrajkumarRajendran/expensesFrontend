@@ -80,6 +80,21 @@ const MonthlyReport = () => {
         <div className="monthly-report-list">
           {expenses.map((index) => {
             const tempObject = index;
+            var background;
+            var color;
+            if (tempObject["expenseType"] === "Food") {
+              background = "#77DD77";
+              color = "white";
+            } else if (tempObject["expenseType"] === "Shopping") {
+              background = "#78A2CC";
+              color = "white";
+            } else if (tempObject["expenseType"] === "Travel") {
+              background = "#957DAD";
+              color = "white";
+            } else {
+              background = "#55CBCD";
+              color = "white";
+            }
             return (
               <div className="monthly-report-item">
                 <span className="mr-expense-title">
@@ -88,7 +103,14 @@ const MonthlyReport = () => {
                 <span className="mr-expense-value">
                   {tempObject["expenseValue"]}
                 </span>
-                <span className="mr-expense-type">
+                <span
+                  className="mr-expense-type"
+                  style={{
+                    backgroundColor: background,
+                    color: color,
+                    fontWeight: 600,
+                  }}
+                >
                   {tempObject["expenseType"]}
                 </span>
                 <span className="mr-expense-date">

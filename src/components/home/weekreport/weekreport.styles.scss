@@ -25,6 +25,7 @@
         font-size: 12px;
         box-sizing: border-box;
         align-items: center;
+        margin: 10px;
         .weekreport-item-title {
           display: flex;
           justify-content: center;
@@ -45,6 +46,7 @@
           justify-content: center;
           width: 20%;
           cursor: pointer;
+          color: #ff6961;
         }
         .weekreport-item-type {
           display: flex;
@@ -114,6 +116,7 @@
           justify-content: center;
           width: 20%;
           cursor: pointer;
+          color: #ff6961;
         }
         .weekreport-item-type {
           display: flex;

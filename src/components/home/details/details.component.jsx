@@ -14,13 +14,19 @@ const Details = () => {
       <div className="details-container-desktop">
         <span className="details-container-title">Month's Expenses</span>
         <div className="details-box-container">
-          <div className="details-box">
+          <div
+            className="details-box"
+            style={{ boxShadow: "2px 2px 16px -6px #77DD77" }}
+          >
             <FontAwesomeIcon className="details-box-icon" icon={faBowlFood} />
             <span className="details-box-detail">
               {typeExpenses["foodTotal"]}
             </span>
           </div>
-          <div className="details-box">
+          <div
+            className="details-box"
+            style={{ boxShadow: "2px 2px 16px -6px #957DAD" }}
+          >
             <FontAwesomeIcon className="details-box-icon" icon={faBus} />
             <span className="details-box-detail">
               {typeExpenses["travelTotal"]}
@@ -28,7 +34,10 @@ const Details = () => {
           </div>
         </div>
         <div className="details-box-container">
-          <div className="details-box">
+          <div
+            className="details-box"
+            style={{ boxShadow: "2px 2px 16px -6px #78A2CC" }}
+          >
             <FontAwesomeIcon
               className="details-box-icon"
               icon={faBagShopping}
@@ -37,7 +46,10 @@ const Details = () => {
               {typeExpenses["shoppingTotal"]}
             </span>
           </div>
-          <div className="details-box">
+          <div
+            className="details-box"
+            style={{ boxShadow: "2px 2px 16px -6px #55CBCD" }}
+          >
             <span className="details-box-misc">Misc.</span>
             <span className="details-box-detail">
               {typeExpenses["miscTotal"]}
@@ -49,25 +61,37 @@ const Details = () => {
   } else {
     return (
       <div className="details-container-mobile">
-        <div className="details-box">
+        <div
+          className="details-box"
+          style={{ boxShadow: "2px 2px 16px -6px #77DD77" }}
+        >
           <FontAwesomeIcon className="details-box-icon" icon={faBowlFood} />
           <span className="details-box-detail">
             {typeExpenses["foodTotal"]}
           </span>
         </div>
-        <div className="details-box">
+        <div
+          className="details-box"
+          style={{ boxShadow: "2px 2px 16px -6px #957DAD" }}
+        >
           <FontAwesomeIcon className="details-box-icon" icon={faBus} />
           <span className="details-box-detail">
             {typeExpenses["travelTotal"]}
           </span>
         </div>
-        <div className="details-box">
+        <div
+          className="details-box"
+          style={{ boxShadow: "2px 2px 16px -6px #78A2CC" }}
+        >
           <FontAwesomeIcon className="details-box-icon" icon={faBagShopping} />
           <span className="details-box-detail">
             {typeExpenses["shoppingTotal"]}
           </span>
         </div>
-        <div className="details-box">
+        <div
+          className="details-box"
+          style={{ boxShadow: "2px 2px 16px -6px #55CBCD" }}
+        >
           <span className="details-box-misc">Misc.</span>
           <span className="details-box-detail">
             {typeExpenses["miscTotal"]}

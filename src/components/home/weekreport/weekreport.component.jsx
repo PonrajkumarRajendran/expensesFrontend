@@ -12,9 +12,24 @@ const WeekReport = () => {
         {Object.keys(weekExpenses).map((index1) => {
           const templist = weekExpenses[index1];
           return (
-            <div className="weekreport-inner-container">
+            <div key={index1} className="weekreport-inner-container">
               {templist.map((index) => {
                 const tempObject = index;
+                var background;
+                var color;
+                if (tempObject["expenseType"] === "Food") {
+                  background = "#77DD77";
+                  color = "white";
+                } else if (tempObject["expenseType"] === "Shopping") {
+                  background = "#78A2CC";
+                  color = "white";
+                } else if (tempObject["expenseType"] === "Travel") {
+                  background = "#957DAD";
+                  color = "white";
+                } else {
+                  background = "#55CBCD";
+                  color = "white";
+                }
                 return (
                   <div key={tempObject["_id"]} className="weekreport-item">
                     <span className="weekreport-item-title">
@@ -23,7 +38,14 @@ const WeekReport = () => {
                     <span className="weekreport-item-value">
                       {tempObject["expenseValue"]}
                     </span>
-                    <span className="weekreport-item-type">
+                    <span
+                      className="weekreport-item-type"
+                      style={{
+                        backgroundColor: background,
+                        color: color,
+                        fontWeight: 600,
+                      }}
+                    >
                       {tempObject["expenseType"]}
                     </span>
                     <span className="weekreport-item-date">

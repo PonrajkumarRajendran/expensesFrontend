@@ -56,7 +56,7 @@
     display: flex;
     justify-content: center;
     .monthly-report-list {
-      width: 90%;
+      width: 95%;
       display: flex;
       flex-direction: column;
       .monthly-report-item {
@@ -64,13 +64,40 @@
         justify-content: space-between;
         width: 100%;
         font-size: 14px;
-        margin: 5px;
+        padding: 10px;
         box-sizing: border-box;
         .mr-expense-title {
+          width: 25%;
           font-weight: 600;
+          border-right: 1px solid #d2d2d2;
+          padding: 5px 10px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
         }
         .mr-expense-type {
+          width: 25%;
           font-weight: 600;
+          border-right: 1px solid #d2d2d2;
+          padding: 5px 10px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+        }
+        .mr-expense-value {
+          width: 25%;
+          border-right: 1px solid #d2d2d2;
+          padding: 5px 10px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+        }
+        .mr-expense-date {
+          width: 25%;
+          padding: 5px 10px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
         }
       }
     }
@@ -135,7 +162,7 @@
     display: flex;
     justify-content: center;
     .monthly-report-list {
-      width: 60%;
+      width: 95%;
       display: flex;
       flex-direction: column;
       .monthly-report-item {
@@ -143,11 +170,39 @@
         justify-content: space-between;
         width: 100%;
         font-size: 14px;
+        padding: 10px;
         .mr-expense-title {
+          width: 25%;
           font-weight: 600;
+          border-right: 1px solid #d2d2d2;
+          padding: 5px 10px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
         }
         .mr-expense-type {
+          width: 25%;
           font-weight: 600;
+          border-right: 1px solid #d2d2d2;
+          padding: 5px 10px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+        }
+        .mr-expense-value {
+          width: 25%;
+          border-right: 1px solid #d2d2d2;
+          padding: 5px 10px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+        }
+        .mr-expense-date {
+          width: 25%;
+          padding: 5px 10px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
         }
       }
     }
