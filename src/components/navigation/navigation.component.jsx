@@ -43,6 +43,9 @@ const Navigation = () => {
     }
   };
   const { user, setUser } = useContext(UserContext);
+  useEffect(() => {
+    console.log(Cookies.get("auth"));
+  }, []);
   // useEffect(() => {
   //   if (user === "") {
   //     navigate("/");
