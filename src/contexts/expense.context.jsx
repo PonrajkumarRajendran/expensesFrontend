@@ -1,17 +1,20 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import {
   getWeekExpenses,
   deleteOneExpense,
   getTypeExpenses,
 } from "../utils/expense.utils";
+import { UserContext } from "./users.context";
 export const ExpenseContext = createContext();
 export const ExpenseProvider = ({ children }) => {
   const [weekExpenses, setWeekExpenses] = useState({});
   const [typeExpenses, setTypeExpenses] = useState({});
-
+  const { user } = useContext(UserContext);
   useEffect(() => {
-    getWeekExpenses(setWeekExpenses);
-    getTypeExpenses(setTypeExpenses);
+    if (user !== "") {
+      getWeekExpenses(setWeekExpenses);
+      getTypeExpenses(setTypeExpenses);
+    }
   }, []);
   const deleteExpense = (id) => {
     deleteOneExpense(id);
