@@ -59,7 +59,7 @@ export const AllowanceProvider = ({ children }) => {
     if (user !== "") {
       setAllowance();
     }
-  }, [allowance, user]);
+  }, [allowance]);
   return (
     <AllowanceContext.Provider value={value}>
       {children}
