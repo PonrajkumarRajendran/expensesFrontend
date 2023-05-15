@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import "./allowanceModal.styles.scss";
 import { AllowanceContext } from "../../../../contexts/allowance.context";
-const AllowanceModal = () => {
+const AllowanceModal = ({ closeFunction }) => {
   const { allowance, setAllowance } = useContext(AllowanceContext);
   const [allowanceValue, setAllowanceValue] = useState(allowance);
   const handleSubmit = (event) => {
     event.preventDefault();
     setAllowance(allowanceValue);
-    window.location.reload();
+    closeFunction();
   };
   const handleChange = (event) => {
     const { value } = event.target;

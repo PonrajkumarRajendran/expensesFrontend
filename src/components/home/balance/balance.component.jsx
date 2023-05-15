@@ -28,7 +28,7 @@ const Balance = () => {
         <span className="allowance-modal-close" onClick={toggleModal}>
           GO BACK
         </span>
-        <AllowanceModal></AllowanceModal>
+        <AllowanceModal closeFunction={toggleModal}></AllowanceModal>
       </div>
 
       <div className="allowance-box">
