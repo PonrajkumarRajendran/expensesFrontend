@@ -102,13 +102,14 @@ const Navigation = () => {
                   <span
                     key={index}
                     className={classValue}
-                    onClick={() =>
+                    onClick={() => {
                       handleClick(
                         index,
                         setNavigationValues,
                         navigationFunction
-                      )
-                    }
+                      );
+                      handleToggle();
+                    }}
                   >
                     {navName}
                   </span>
