@@ -7,7 +7,6 @@ const MiddlePage = () => {
   const { setUser } = useContext(UserContext);
   const navigate = useNavigate();
   useEffect(() => {
-    console.log("inside");
     if (token) {
       localStorage.setItem("user", token);
       setUser(token);

@@ -31,7 +31,7 @@ export const AllowanceProvider = ({ children }) => {
     if (user !== "") {
       getAllowance();
     }
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     const setAllowance = async () => {
@@ -59,7 +59,7 @@ export const AllowanceProvider = ({ children }) => {
     if (user !== "") {
       setAllowance();
     }
-  }, [allowance]);
+  }, [allowance, user]);
   return (
     <AllowanceContext.Provider value={value}>
       {children}

@@ -15,7 +15,7 @@ export const ExpenseProvider = ({ children }) => {
       getWeekExpenses(setWeekExpenses);
       getTypeExpenses(setTypeExpenses);
     }
-  }, []);
+  }, [user]);
   const deleteExpense = (id) => {
     deleteOneExpense(id);
   };
