@@ -38,7 +38,6 @@ export const pullRetirementPlan = async (
     setloaderClass("retirement-loader-hidden");
     setFunction(suggestionsArray);
     setFunction2(otherArray);
-    console.log(otherArray);
   } catch (err) {
     console.log(err);
   }

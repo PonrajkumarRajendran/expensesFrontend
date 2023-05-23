@@ -23,7 +23,6 @@ const Retirement = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(retirementFields);
     pullRetirementPlan(
       retirementFields,
       setRetirementSuggestion,
