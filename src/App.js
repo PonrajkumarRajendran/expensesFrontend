@@ -5,6 +5,7 @@ import MonthlyReport from "./components/monthlyReport/monthlyreport.component";
 import SignIn from "./components/authentication/signin/signin.component";
 import SignUp from "./components/authentication/signup/signup.component";
 import MiddlePage from "./components/middlepage/middlepage.component";
+import Planner from "./components/planner/planner.component";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="home/" element={<Navigation />}>
         <Route index element={<Home />} />
         <Route path="monthly_report" element={<MonthlyReport />} />
+        <Route path="planner" element={<Planner />} />
       </Route>
     </Routes>
   );

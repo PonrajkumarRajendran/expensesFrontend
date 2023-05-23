@@ -1,0 +1,114 @@
+.retirement-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 50%;
+  .retirement-title {
+    font-weight: 600;
+  }
+  .retirement-form {
+    width: 80%;
+    background-color: white;
+    box-shadow: 2px 2px 16px -10px #121212;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+    border-radius: 20px;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .retirement-input-container {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .retirement-label {
+          font-size: 14px;
+          font-weight: 600;
+        }
+        .retirement-input {
+          padding: 5px;
+          font-family: "Montserrat";
+          outline: none;
+          border-radius: 10px;
+          border: none;
+          border: 1px solid #595959;
+        }
+      }
+      .retirement-submit {
+        margin: 10px;
+        padding: 5px 10px;
+        font-family: "Montserrat";
+        border: none;
+        background-color: #595959;
+        color: white;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  .retirement-suggestion-box {
+    width: 80%;
+    background-color: white;
+    box-shadow: 2px 2px 16px -10px #121212;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    .retirement-suggestion-header {
+      font-size: 16px;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    .retirement-suggestion-text-block {
+      font-weight: 700;
+    }
+  }
+  .other-suggestion-box {
+    width: 80%;
+    background-color: white;
+    box-shadow: 2px 2px 16px -10px #121212;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    .other-suggestion-header {
+      font-size: 16px;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  }
+}
+.retirement-loader-hidden {
+  display: none;
+}
+.retirement-loader-visible {
+  margin: 30px;
+  .retirement-loader {
+    border: 5px solid #e3e3e3;
+    border-top: 5px solid #595959;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

@@ -22,8 +22,8 @@ const Navigation = () => {
     const navigationObject = {
       HOME: "",
       MONTHLY_REPORT: "",
+      PLANNER: "",
     };
-
     if (localValue) {
       setNavigationValues({ ...navigationObject, [localValue]: "active" });
       if (localValue === "HOME") {
@@ -32,7 +32,7 @@ const Navigation = () => {
         navigate(localValue.toLowerCase());
       }
     } else {
-      setNavigationClass({ ...navigationObject, HOME: "active" });
+      setNavigationValues({ ...navigationObject, HOME: "active" });
     }
   }, []);
   const handleToggle = () => {
@@ -92,33 +92,35 @@ const Navigation = () => {
               onClick={handleToggle}
             />
             <div className={navigationClass}>
-              <span className="navigation-box-close" onClick={handleToggle}>
-                X
-              </span>
-              {Object.keys(navigationValues).map((index) => {
-                const classValue =
-                  "navigation-box-item " + navigationValues[index];
-                const navName = index.replace("_", " ");
-                return (
-                  <span
-                    key={index}
-                    className={classValue}
-                    onClick={() => {
-                      handleClick(
-                        index,
-                        setNavigationValues,
-                        navigationFunction
-                      );
-                      handleToggle();
-                    }}
-                  >
-                    {navName}
-                  </span>
-                );
-              })}
-              <span className="navigation-box-item" onClick={handleLogout}>
-                LOG OUT
-              </span>
+              <div className="expenses-navitems">
+                <span className="navigation-box-close" onClick={handleToggle}>
+                  X
+                </span>
+                {Object.keys(navigationValues).map((index) => {
+                  const classValue =
+                    "navigation-box-item " + navigationValues[index];
+                  const navName = index.replace("_", " ");
+                  return (
+                    <span
+                      key={index}
+                      className={classValue}
+                      onClick={() => {
+                        handleClick(
+                          index,
+                          setNavigationValues,
+                          navigationFunction
+                        );
+                        handleToggle();
+                      }}
+                    >
+                      {navName}
+                    </span>
+                  );
+                })}
+                <span className="navigation-box-item" onClick={handleLogout}>
+                  LOG OUT
+                </span>
+              </div>
             </div>
           </div>
         )}

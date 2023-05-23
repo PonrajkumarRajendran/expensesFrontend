@@ -38,8 +38,11 @@
   }
   .navigation-box-hidden {
     display: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
-  .navigation-box-visible {
+  .expenses-navitems {
     display: flex;
     flex-direction: column;
     position: fixed;
